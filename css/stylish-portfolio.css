@@ -6,6 +6,7 @@
 
 /* Global Styles */
 
+
 html,
 body {
     width: 100%;
@@ -20,6 +21,9 @@ body {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: black;
+    opacity: 0.7
 }
 
 .text-vertical-center h1 {
