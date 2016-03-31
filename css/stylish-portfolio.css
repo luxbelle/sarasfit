@@ -22,9 +22,10 @@ body {
     text-align: center;
     vertical-align: middle;
     font-family: 'Noto Sans KR', sans-serif;
-    opacity: 0.9;
+    opacity: 0.8;
     color: #C33896;
 }
+
 
 .text-vertical-center h1 {
     margin: 0;
@@ -34,6 +35,13 @@ body {
 }
 
 /* Custom Button Styles */
+
+.lighten {
+    border-radius: 0;
+    background-color: rgba(255,255,255,0.5);
+    max-width: 400px;
+    margin: 0 auto;
+}
 
 .btn-dark {
     border-radius: 0;
