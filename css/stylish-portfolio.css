@@ -258,3 +258,11 @@ hr.small {
 footer {
     padding: 100px 0;
 }
+
+@media only screen and (max-width: 768px) {
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+}
