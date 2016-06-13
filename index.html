@@ -29,10 +29,15 @@
     </md-radio-group>
 
 
+    <h2 style="clear:both">패드</h2>
+    <md-radio-group ng-model="data.group3">
+      <md-radio-button ng-repeat="ic in padData" ng-value="ic.value" aria-label="{{ic.title}}" style="float:left">
+        <label>{{ic.title}}</label><img src="{{ic.id}}">
+      </md-radio-button>
+    </md-radio-group>
     <input style="clear:both" type="submit" id="submit" value="Submit" />
 
-    <p style="margin-top: 0">추천하는 브라:
-    <span ng-checked=1 class="radioValue">{{display}}</span></p>
+    <p style="margin-top: 0">추천하는 브라:<span class="radioValue">{{display}}</span></p>
   </form>
 </div>
 
