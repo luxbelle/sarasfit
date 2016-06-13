@@ -16,7 +16,7 @@ angular
     $scope.frontData = [{
         id: "img/flat.png",
         title: '납작형',
-        value: '납작형 추천1'
+        value: 'njh'
       },{
         id: "img/cone.png",
         title: '원추형',
