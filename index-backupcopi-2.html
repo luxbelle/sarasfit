@@ -37,9 +37,8 @@
            <label><input type="radio" ng-model="padValue" value="3b"/> 얇은 패드</label>
            <label><input type="radio" ng-model="padValue" value="3c"/> 컵 아래부분의 반정도 볼륨이 있는 중간 패드</label>   
            <label><input type="radio" ng-model="padValue" value="3d"/> 컵 전체를 거의다 볼륨으로 채우는 두꺼운 패드</label>        
-
-           <button type="submit">Submit</button>
            <br>
+           <div><p>결과보기: </p></div>
            <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3a'"><p>사라스핏 1001 제품</p></div>
            <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3b'"><p>사라스핏 1001 제품</p></div>
            <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3c'"><p>사라스핏 1002 제품</p></div>

@@ -59,12 +59,25 @@
              <a href="https://sarasfit.typeform.com/to/swPtZT" class="btn btn-dark btn-lg">핏테스트 하러가기</a>
          </div>
      </header>
+
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>사라스핏 서비스 이용방법</h3>
+
+                </div>
+            </div>
+        </div>
+    </aside>
+
     <!-- About -->
     <section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-lg text-center">
-                    <h3>사라스핏 서비스 이용방법</h3>
+                    
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-4 col-sm-12">
@@ -112,108 +125,190 @@
         <!-- /.container -->
     </section>
 
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>재미있는 핏테스트 하기</h3>
+
+                </div>
+            </div>
+        </div>
+    </aside>
+
     <!-- About -->
     <section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3>Fun Fit Test</h3>                    <hr class="small">
+                     <hr class="small">
 
                     <p>나의 가슴 유형은? (정면1개, 측면1개, 패드1개를 선택해 주세요.)
                     <br>
-           <h4><strong>1.정면</strong></h4>
-                    <br>
         <form name="myForm" ng-submit="submitForm()">
-        <table>
-           <label><img src="img/njh.png" height="150px" /><input type="radio" ng-model="frontValue" value="1a" /></label>
-           <label><img src="img/wch.png" height="150px" /><input type="radio" ng-model="frontValue" value="1b" /></label>
-           <label><img src="img/bgh.png" height="150px" /><input type="radio" ng-model="frontValue" value="1c" /></label>
-           <label><img src="img/hsh.png" height="150px" /><input type="radio" ng-model="frontValue" value="1d" /></label>
+
+           <h4><strong>1.정면</strong></h4>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-12">
+                            <div class="service-item">
+                                <p><img src="img/njh.png" height="200px" /></p>
+                                <br>
+                                <input type="radio" ng-model="frontValue" value="1a" />
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="service-item">
+                                <p><img src="img/wch.png" height="200px" /></p>
+                                <br>
+                                <input type="radio" ng-model="frontValue" value="1b" />
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="service-item">
+                                <p><img src="img/bgh.png" height="200px" /></p>
+                                <br>
+                                <input type="radio" ng-model="frontValue" value="1c" />
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="service-item">
+                                <p><img src="img/hsh.png" height="200px" /></p>
+                                <br>
+                                <input type="radio" ng-model="frontValue" value="1d" />
+                            </div>
+                        </div>
+                    </div>
            <br>
            <h4><strong>2.측면</strong></h4>
-           
-           <br>
-           <label><img src="img/dgh.png" height="150px" /><input type="radio" ng-model="sideValue" value="2a" /></label>
-           <label><img src="img/pjh.png" height="150px" /><input type="radio" ng-model="sideValue" value="2b" /></label>
-           <label><img src="img/jgs.png" height="150px" /><input type="radio" ng-model="sideValue" value="2c" /></label>
+                     <hr class="small">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="service-item">
+                                <p><img src="img/dgh.png" height="200px" /></p>
+                                <br>
+                                <input type="radio" ng-model="sideValue" value="2a" />
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="service-item">
+                                <p><img src="img/pjh.png" height="200px" /></p>
+                                <br>
+                                <input type="radio" ng-model="sideValue" value="2b" />
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="service-item">
+                                <p><img src="img/jgs.png" height="200px" /></p>
+                                <br>
+                                <input type="radio" ng-model="sideValue" value="2c" />
+                            </div>
+                        </div>
+                    </div>
+           <br>          
+
            <h4><strong>3.패드</strong></h4>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-12">
+                            <div class="service-item">
+                                <p><img src="img/none.png" height="100px" /></p>
+                                <br>
+                                <input type="radio" ng-model="padValue" value="3a" />
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="service-item">
+                                <p><img src="img/thin.png" height="100px" /></p>
+                                <br>
+                                <input type="radio" ng-model="padValue" value="3b" />
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="service-item">
+                                <p><img src="img/mid.png" height="100px" /></p>
+                                <br>
+                                <input type="radio" ng-model="padValue" value="3c" />
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="service-item">
+                                <p><img src="img/thick.png" height="100px" /></p>
+                                <br>
+                                <input type="radio" ng-model="padValue" value="3d" />
+                            </div>
+                        </div>
+                    </div>
            <br>
-           <label><img src="img/none.png" height="70px" /><input type="radio" ng-model="padValue" value="3a"/></label>
-           <label><img src="img/thin.png" height="70px" /><input type="radio" ng-model="padValue" value="3b"/></label>
-           <label><img src="img/mid.png" height="70px" /><input type="radio" ng-model="padValue" value="3c"/></label>   
-           <label><img src="img/thick.png" height="70px" /><input type="radio" ng-model="padValue" value="3d"/></label>        
-        </table>
+           <h3><strong>사라스핏 추천제품: </strong></h3>
 
-           <br>
-           <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3a'"><p>사라스핏 1001 제품</p></div>
-           <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3b'"><p>사라스핏 1001 제품</p></div>
-           <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3c'"><p>사라스핏 1002 제품</p></div>
-           <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3d'"><p>사라스핏 1003 제품</p></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3a'"><h3><strong>사라스핏 1001 제품</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3b'"><h3><strong>사라스핏 1001 제품</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3c'"><h3><strong>사라스핏 1002 제품</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3d'"><h3><strong>사라스핏 1003 제품</strong></h3></div>
 
-           <div ng-show="frontValue=='1a' && sideValue=='2b' && padValue=='3a'"><p>사라스핏 1001 제품</p></div>
-           <div ng-show="frontValue=='1a' && sideValue=='2b' && padValue=='3b'"><p>사라스핏 1001 제품</p></div>
-           <div ng-show="frontValue=='1a' && sideValue=='2b' && padValue=='3c'"><p>사라스핏 1002 제품</p></div>
-           <div ng-show="frontValue=='1a' && sideValue=='2b' && padValue=='3d'"><p>사라스핏 1003 제품</p></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2b' && padValue=='3a'"><h3><strong>사라스핏 1001 제품</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2b' && padValue=='3b'"><h3><strong>사라스핏 1001 제품</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2b' && padValue=='3c'"><h3><strong>사라스핏 1002 제품</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2b' && padValue=='3d'"><h3><strong>사라스핏 1003 제품</strong></h3></div>
 
-           <div ng-show="frontValue=='1a' && sideValue=='2c' && padValue=='3a'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1a' && sideValue=='2c' && padValue=='3b'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1a' && sideValue=='2c' && padValue=='3c'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1a' && sideValue=='2c' && padValue=='3d'"><p>Coming Soon</p></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2c' && padValue=='3a'"><h3><strong>Coming Soon</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2c' && padValue=='3b'"><h3><strong>Coming Soon</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2c' && padValue=='3c'"><h3><strong>Coming Soon</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2c' && padValue=='3d'"><h3><strong>Coming Soon</strong></h3></div>
 
 
-           <div ng-show="frontValue=='1b' && sideValue=='2a' && padValue=='3a'"><p>사라스핏 1004 제품</p></div>
-           <div ng-show="frontValue=='1b' && sideValue=='2a' && padValue=='3b'"><p>사라스핏 1004 제품</p></div>
-           <div ng-show="frontValue=='1b' && sideValue=='2a' && padValue=='3c'"><p>사라스핏 1005 제품</p></div>
-           <div ng-show="frontValue=='1b' && sideValue=='2a' && padValue=='3d'"><p>사라스핏 1006 제품</p></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2a' && padValue=='3a'"><h3><strong>사라스핏 1004 제품</strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2a' && padValue=='3b'"><h3><strong>사라스핏 1004 제품</strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2a' && padValue=='3c'"><h3><strong>사라스핏 1005 제품</strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2a' && padValue=='3d'"><h3><strong>사라스핏 1006 제품</strong></h3></div>
 
-           <div ng-show="frontValue=='1b' && sideValue=='2b' && padValue=='3a'"><p>사라스핏 1007 제품</p></div>
-           <div ng-show="frontValue=='1b' && sideValue=='2b' && padValue=='3b'"><p>사라스핏 1007 제품</p></div>
-           <div ng-show="frontValue=='1b' && sideValue=='2b' && padValue=='3c'"><p>사라스핏 1008 제품</p></div>
-           <div ng-show="frontValue=='1b' && sideValue=='2b' && padValue=='3d'"><p>사라스핏 1008 제품</p></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2b' && padValue=='3a'"><h3><strong>사라스핏 1007 제품</strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2b' && padValue=='3b'"><h3><strong>사라스핏 1007 제품</strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2b' && padValue=='3c'"><h3><strong>사라스핏 1008 제품</strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2b' && padValue=='3d'"><h3><strong>사라스핏 1008 제품</strong></h3></div>
 
-           <div ng-show="frontValue=='1b' && sideValue=='2c' && padValue=='3a'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1b' && sideValue=='2c' && padValue=='3b'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1b' && sideValue=='2c' && padValue=='3c'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1b' && sideValue=='2c' && padValue=='3d'"><p>Coming Soon</p></div>
-
-
-           <div ng-show="frontValue=='1c' && sideValue=='2a' && padValue=='3a'"><p>사라스핏 1009</p></div>
-           <div ng-show="frontValue=='1c' && sideValue=='2a' && padValue=='3b'"><p>사라스핏 1009</p></div>
-           <div ng-show="frontValue=='1c' && sideValue=='2a' && padValue=='3c'"><p>사라스핏 1010</p></div>
-           <div ng-show="frontValue=='1c' && sideValue=='2a' && padValue=='3d'"><p>Coming Soon</p></div>
-
-           <div ng-show="frontValue=='1c' && sideValue=='2b' && padValue=='3a'"><p>사라스핏 1009</p></div>
-           <div ng-show="frontValue=='1c' && sideValue=='2b' && padValue=='3b'"><p>사라스핏 1009</p></div>
-           <div ng-show="frontValue=='1c' && sideValue=='2b' && padValue=='3c'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1c' && sideValue=='2b' && padValue=='3d'"><p>Coming Soon</p></div>
-
-           <div ng-show="frontValue=='1c' && sideValue=='2c' && padValue=='3a'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1c' && sideValue=='2c' && padValue=='3b'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1c' && sideValue=='2c' && padValue=='3c'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1c' && sideValue=='2c' && padValue=='3d'"><p>Coming Soon</p></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2c' && padValue=='3a'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2c' && padValue=='3b'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2c' && padValue=='3c'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2c' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
 
 
-           <div ng-show="frontValue=='1d' && sideValue=='2a' && padValue=='3a'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1d' && sideValue=='2a' && padValue=='3b'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1d' && sideValue=='2a' && padValue=='3c'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1d' && sideValue=='2a' && padValue=='3d'"><p>Coming Soon</p></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2a' && padValue=='3a'"><h3><strong>사라스핏 1009</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2a' && padValue=='3b'"><h3><strong>사라스핏 1009</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2a' && padValue=='3c'"><h3><strong>사라스핏 1010</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2a' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
 
-           <div ng-show="frontValue=='1d' && sideValue=='2b' && padValue=='3a'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1d' && sideValue=='2b' && padValue=='3b'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1d' && sideValue=='2b' && padValue=='3c'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1d' && sideValue=='2b' && padValue=='3d'"><p>Coming Soon</p></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2b' && padValue=='3a'"><h3><strong>사라스핏 1009</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2b' && padValue=='3b'"><h3><strong>사라스핏 1009</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2b' && padValue=='3c'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2b' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
 
-           <div ng-show="frontValue=='1d' && sideValue=='2c' && padValue=='3a'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1d' && sideValue=='2c' && padValue=='3b'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1d' && sideValue=='2c' && padValue=='3c'"><p>Coming Soon</p></div>
-           <div ng-show="frontValue=='1d' && sideValue=='2c' && padValue=='3d'"><p>Coming Soon</p></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2c' && padValue=='3a'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2c' && padValue=='3b'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2c' && padValue=='3c'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2c' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
+
+
+           <div ng-show="frontValue=='1d' && sideValue=='2a' && padValue=='3a'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2a' && padValue=='3b'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2a' && padValue=='3c'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2a' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
+
+           <div ng-show="frontValue=='1d' && sideValue=='2b' && padValue=='3a'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2b' && padValue=='3b'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2b' && padValue=='3c'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2b' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
+
+           <div ng-show="frontValue=='1d' && sideValue=='2c' && padValue=='3a'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2c' && padValue=='3b'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2c' && padValue=='3c'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2c' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
         </form>
 
                     <br>
 
-                    <input type="submit" id="submit" value="결과보기" />
-
-                    </p>
                 </div>
             </div>
             <!-- /.row -->
@@ -221,7 +316,28 @@
         <!-- /.container -->
     </section>
 
+  
     <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>사라스핏 서비스 이용방법</h3>
+                </div>
+            </div>
+        </div>
+    </aside>
+     <!-- Header -->
+      <header id="top" class="header1">
+          <div class="text-vertical-center">
+         </div>
+     </header>
+     <!-- Header -->
+      <header id="top" class="header2">
+          <div class="text-vertical-center">
+         </div>
+     </header>
+  <!-- Call to Action -->
     <aside class="call-to-action bg-primary">
         <div class="container">
             <div class="row">
@@ -231,73 +347,6 @@
             </div>
         </div>
     </aside>
-
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-lg text-center">
-                    <h3>사라스핏 서비스 이용방법</h3>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>아름다운 몸매를 연출하고 싶으신가요?</strong>
-                                </h4>
-                                <p>내 가슴 사이즈와 체형을 제대로 알고, 맞는 브라를 입어야 <br>가장 편하며 건강한 가슴을 만들 수 있습니다.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>핏테스트 시작하기</strong>
-                                </h4>
-                    <p>가슴 모양과 가슴 체형에 따라 
-                    편한 기능을 하는 브라가 달라집니다.<br><br> 
-
-                    자기에게 맞는 사이즈를 입고
-                    자신의 체형에 맞는 기능의 브라를 입어야<br>
-                    건강한 가슴을 유지하고
-                    가장 여성적인 아름다운 핏을 
-                    나타낼 수 있습니다. <br><br>
-
-                    여러분에게 핏이 가장 잘 맞는 브라를 
-                    알려드리는 것이 
-                    사라의 역할이라는 거 아시겠죠?
-                    </p>
-                                                </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-
-    <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3></h3>
-
-                </div>
-            </div>
-        </div>
-    </aside>
-
 
     <!-- Footer -->
     <footer>
