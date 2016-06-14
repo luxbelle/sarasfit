@@ -1,19 +1,12 @@
 
 angular
-  .module('Survey',[])
+  .module('Survey',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
   .controller('AppCtrl', function($scope) {
-    
+
     $scope.submit =function() {
       $scope.display = $scope.data.group1 + $scope.data.group2  + $scope.data.group3;
-    $scope.isShown = function(sideData) {
-        return sideData === $scope.sideData;
-    };
-    $scope.color = 'blue';
-    $scope.isShown = function(color) {
-        return color === $scope.color;
-    };
-  };   
-
+      $scope.selected = $scope.frontData[0].value;
+  };
 
     $scope.data = {
       group1 : '추천브라1',
@@ -66,5 +59,8 @@ angular
         title: '컵 전체를 거의다 볼륨으로 채우는 두꺼운 패드',
         value: 'thickpad'
     }];
+   
+
+
 
   });
