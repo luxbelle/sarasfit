@@ -4,8 +4,11 @@ angular
   .controller('AppCtrl', function($scope) {
     
     $scope.submit =function() {
-      $scope.display = $scope.data.group1 + $scope.data.group2  + $scope.data.group3;
-  };
+      $scope.display = $scope.data.group1 + $scope.data.group2  + $scope.frontData[1].isChecked;
+      if ($scope.frontData[1].isChecked){
+        $scope.abc = $scope.data.group1
+      }
+  };   
 
     $scope.data = {
       group1 : '추천브라1',
@@ -16,7 +19,8 @@ angular
     $scope.frontData = [{
         id: "img/flat.png",
         title: '납작형',
-        value: 'njh'
+        value: 'njh',
+        isChecked: true
       },{
         id: "img/cone.png",
         title: '원추형',
