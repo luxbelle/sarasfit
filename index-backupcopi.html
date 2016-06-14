@@ -11,20 +11,20 @@
 
 <body>
 
-<div class="radioButtondemoBasicUsage" ng-app="Survey">
+<div class="radioButtondemoBasicUsage" ng-app="Survey" ng-controller="AppCtrl">
   <form ng-submit="submit()" ng-controller="AppCtrl" ng-cloak="">
     <p style="margin-bottom: 0;">가슴 측면유형과 정면유형을 선택하시면 꼭 맞는 브래지어를 추천해 드립니다.</p>
     <h2>측면유형</h2>
     <md-radio-group ng-model="data.group1">
       <md-radio-button ng-repeat="it in frontData" ng-value="it.value" aria-label="{{it.title}}" style="float:left">
-        <label>{{it.title}}</label><img src="{{it.id}}">
+        <label>{{it.title}}</label><img src="{{it.id}}" height="100px">
       </md-radio-button>
     </md-radio-group>
 
     <h2 style="clear:both">정면유형</h2>
     <md-radio-group ng-model="data.group2">
-      <md-radio-button ng-repeat="ib in sideData" ng-value="ib.value" aria-label="{{ib.title}}" style="float:left">
-        <label>{{ib.title}}</label><img src="{{ib.id}}">
+      <md-radio-button ng-repeat="ib in sideData" ng-model="sideData" ng-value="ib.value" aria-label="{{ib.title}}" style="float:left">
+        <label>{{ib.title}}</label><img src="{{ib.id}}" height="100px">
       </md-radio-button>
     </md-radio-group>
 
@@ -39,8 +39,19 @@
     <input type="submit" id="submit" value="결과보기" />
     </div>
     <p style="margin-top: 0">추천하는 브라:<span class="radioValue">{{display}}</span></p>
-    <span class="radioValue">{{abc}}</span>
+    <span ng-show="isShown('flat')">Update</span>
   </form>
+
+    <form name="myForm">
+        <input type="radio" ng-model="color" value="red"> Red<br/>
+        <input type="radio" ng-model="color" value="green"> Green<br/>
+        <input type="radio" ng-model="color" value="blue"> Blue<br/>
+    </form>
+
+    <div ng-show="isShown('red') && isShown('red')">Red Selected</div>
+    <div ng-show="isShown('green')">Green Selected</div>
+    <div ng-show="isShown('blue')">Blue Selected</div>
+
 </div>
 
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>

@@ -1,14 +1,19 @@
 
 angular
-  .module('Survey',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
+  .module('Survey',[])
   .controller('AppCtrl', function($scope) {
     
     $scope.submit =function() {
-      $scope.display = $scope.data.group1 + $scope.data.group2  + $scope.frontData[1].isChecked;
-      if ($scope.frontData[1].isChecked){
-        $scope.abc = $scope.data.group1
-      }
+      $scope.display = $scope.data.group1 + $scope.data.group2  + $scope.data.group3;
+    $scope.isShown = function(sideData) {
+        return sideData === $scope.sideData;
+    };
+    $scope.color = 'blue';
+    $scope.isShown = function(color) {
+        return color === $scope.color;
+    };
   };   
+
 
     $scope.data = {
       group1 : '추천브라1',
@@ -19,65 +24,47 @@ angular
     $scope.frontData = [{
         id: "img/flat.png",
         title: '납작형',
-        value: 'njh',
-        isChecked: true
+        value: 'flat'
       },{
         id: "img/cone.png",
         title: '원추형',
-        value: '원추형 추천2'
+        value: 'cone'
       },{
         id: "img/hemi.png",
         title: '반구형',
-        value: '반구형 추천3'
+        value: 'hemi'
     },{
         id: "img/drooping.png",
         title: '하수형',
-        value: '하수형 추천4'
+        value: 'drooping'
     }];
 
     $scope.sideData = [{
-        id: "img/flat.png",
-        title: 'Round',
-        value: 'Round 추천1'
+        id: "img/dgh.png",
+        title: '둥근형',
+        value: 'dgh'
       },{
-        id: "img/cone.png",
-        title: '벌어진형-퍼진형',
-        value: '벌어진형-퍼진형 추천2'
+        id: "img/pjh.png",
+        title: '퍼진형',
+        value: 'pjh'
       },{
-        id: "img/hemi.png",
-        title: '짝짝',
-        value: '짝짝 추천3'
-    },{
-        id: "img/drooping.png",
-        title: '새가슴',
-        value: '새가슴 추천4'
+        id: "img/jgs.png",
+        title: '짝가슴',
+        value: 'jgs'
     }];
 
     $scope.padData = [{
-        id: "img/flat.png",
         title: '없음',
-        value: '없음 추천1'
+        value: 'nopad'
       },{
-        id: "img/cone.png",
         title: '얇은 패드',
-        value: '얇은 패드 추천2'
+        value: 'thinpad'
       },{
-        id: "img/hemi.png",
         title: '컵 아래부분의 반정도 볼륨이 있는 중간 패드',
-        value: '컵 아래부분의 반정도 볼륨이 있는 중간 패드 추천3'
+        value: 'midpad'
     },{
-        id: "img/drooping.png",
         title: '컵 전체를 거의다 볼륨으로 채우는 두꺼운 패드',
-        value: '컵 전체를 거의다 볼륨으로 채우는 두꺼운 패드 추천4'
+        value: 'thickpad'
     }];
-
-    $scope.radioData = [
-      { label: '1', value: 1 },
-      { label: '2', value: 2 },
-      { label: '3', value: '3'},
-      { label: '4', value: '4' }
-    ];
-
-
 
   });
