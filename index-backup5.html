@@ -291,62 +291,6 @@
                             <div class="service-item">
                             밴드사이즈: 
                               <select ng-model="bandValue">
-                                <option values="">--Select--</option>                              
-                                <option value=70>70</option>
-                                <option value=75>75</option>
-                                <option value=80>80</option>
-                                <option value=85>85</option>
-                              </select>
-                            컵사이즈: 
-                              <select style="float:left;" id="subcats">
-                              </select>
-                            </div>
-                        </div>
-                    </div>
-           <br>
-<script>
- var one = [
-        {display: "--Select--"},
-                {display: "B", value: 2 }];
-   
-var two = [
-                {display: "--Select--"},
-                {display: "A", value: 1 },
-                {display: "B", value: 2 },
-                {display: "C", value: 3 },
-                {display: "D", value: 4 },
-                {display: "E", value: 5 },
-                {display: "F", value: 6 }];
-                
-$("#categories").change(function() {
-                     var parent = $(this).val();
-                        switch(parent){
-                            case '70':
-                                 list(one);
-                                break;
-                            case '75':
-                                 list(two);
-                                break;             
-                            default: //default child option is blank
-                                 list(two);
-                                break;
-                               }
-                });
-                function list(array_list)
-                {
-                    $("#subcats").html(""); //reset child options
-                    $(array_list).each(function (i) { //populate child options
-                    $("#subcats").append("<option value=\""+array_list[i].value+"\">"+array_list[i].display+"</option>");
-                    });
-                }
-</script>
-           <h4><strong>4.사이즈 & 브랜드</strong></h4>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <div class="service-item">
-                            밴드사이즈: 
-                              <select ng-model="bandValue">
                                 <option value=70>70</option>
                                 <option value=75>75</option>
                                 <option value=80>80</option>
