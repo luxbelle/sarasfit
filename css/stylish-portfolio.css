@@ -21,7 +21,7 @@ body {
     display: table-cell;
     text-align: center;
     vertical-align: bottom;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'Jeju Gothic', serif;
     opacity: 0.8;
     color: #000000;
 }
@@ -30,7 +30,7 @@ body {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'Jeju Gothic', serif;
     opacity: 0.8;
     color: #000000;
 }
@@ -39,13 +39,13 @@ body {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'Jeju Gothic', serif;
     opacity: 0.8;
     color: #000000;
 }
 
 .text-vertical-center3 {
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'Jeju Gothic', serif;
 }
 
 .text-vertical-center h1 {
