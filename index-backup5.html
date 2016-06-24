@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularjs-starter">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="naver-site-verification" content="1efa5897a3c03594954d93ad1b2f0addfdeea167"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.css'>
+    <link rel='stylesheet prefetch' href='https://material.angularjs.org/1.1.0-rc.5/docs.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+    <script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.js'></script>
+    <script src="app.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Sara's Fit</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-controller="MainCtrl">
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5CHGJV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5CHGJV');</script>
+    <!-- End Google Tag Manager -->
+     <!-- Header -->
+      <header id="top" class="header">
+          <div class="text-vertical-center">
+             <a href="https://sarasfit.typeform.com/to/swPtZT" class="btn btn-dark btn-lg">핏테스트 하러가기</a>
+         </div>
+     </header>
+
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>사라스핏 서비스 이용방법</h3>
+
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-lg text-center">
+                    
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-cloud fa-stack-1x text-primary" style="color:#64b3b4;"></i>
+                            </span>
+                                <h4>
+                                    <strong>사이즈 측정</strong>
+                                </h4>
+                                <p>본인의 가슴사이즈와 체형이 어떤지 잘 모르시나요?</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-compass fa-stack-1x text-primary" style="color:#64b3b4;"></i>
+                            </span>
+                                <h4>
+                                    <strong>핏테스트 완료</strong>
+                                </h4>
+                                <p>재미있고 알기쉬운 핏테스트(아래)를 진행하셔서 자신의 현재상태 및 정보를 사라에게 알려주세요.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-flask fa-stack-1x text-primary" style="color:#64b3b4;"></i>
+                            </span>
+                                <h4>
+                                    <strong>사라의 추천 브라 구매</strong>
+                                </h4>
+                                <p>고객님의 핏테스트 데이터를 분석하여 사라는 고객님에게  가장 편한 브라를 추천하며, 구매 후 매일 착용하시면 되세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>재미있는 핏테스트 하기</h3>
+
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                     <hr class="small">
+
+                    <p>나의 가슴 유형은? (정면1개, 측면1개, 패드1개를 선택해 주세요.)
+                    <br>
+        <form name="myForm" ng-submit="submitForm()">
+
+           <h4><strong>1.측면</strong></h4>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-xs-0 col-md-3">
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="njh">
+                                <img src="img/njh.png" height="200px" /><br>
+                                <input id="njh" type="radio" ng-model="frontValue" value="1a" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="wch">
+                                <img src="img/wch.png" height="200px" /><br>
+                                <input id="wch" type="radio" ng-model="frontValue" value="1b" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-0 col-md-3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-0 col-md-3">
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="bgh">
+                                <img src="img/bgh.png" height="200px" /><br>
+                                <input id="bgh" type="radio" ng-model="frontValue" value="1c" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="hsh">
+                                <img src="img/hsh.png" height="200px" /><br>
+                                <input id="hsh" type="radio" ng-model="frontValue" value="1d" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-0 col-md-3">
+                        </div>
+                    </div>
+           <br>
+           <h4><strong>2.정면</strong></h4>
+                     <hr class="small">
+                    <div class="row">
+                        <div class="col-xs-0 col-md-3">
+                        </div>                    
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="dgh">
+                                <img src="img/dgh.png" height="200px" /><br>
+                                <input id="dgh" type="radio" ng-model="sideValue" value="2a" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="pjh">
+                                <img src="img/pjh.png" height="200px" /><br>
+                                <input id="pjh" type="radio" ng-model="sideValue" value="2b" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-0 col-md-3">
+                        </div>
+                    </div>
+                    <div class="row">  
+                        <div class="col-xs-0 col-md-3">
+                        </div>                                     
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="jgs">
+                                <img src="img/jgs.png" height="200px" /><br>
+                                <input id="jgs" type="radio" ng-model="sideValue" value="2c" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                            </div>
+                        </div>                        
+                        <div class="col-xs-0 col-md-3">
+                        </div>                          
+                    </div>
+           <br>          
+
+           <h4><strong>3.패드</strong></h4>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-xs-0 col-md-3">
+                        </div>   
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="none">
+                                <img src="img/none.png" height="100px" /><br>
+                                <input id="none" type="radio" ng-model="padValue" value="3a" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="thin">
+                                <img src="img/thin.png" height="100px" /><br>
+                                <input id="thin" type="radio" ng-model="padValue" value="3b" />
+                            </div>
+                        </div>
+                        <div class="col-xs-0 col-md-3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-0 col-md-3">
+                        </div>   
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="mid">
+                                <img src="img/mid.png" height="100px" /><br>
+                                <input id="mid" type="radio" ng-model="padValue" value="3c" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="thick">
+                                <img src="img/thick.png" height="100px" /><br>
+                                <input id="thick" type="radio" ng-model="padValue" value="3d" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-0 col-md-3">
+                        </div>
+                    </div>
+           <br>
+           <h4><strong>4.사이즈 & 브랜드</strong></h4>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <div class="service-item">
+                            밴드사이즈: 
+                              <select ng-model="bandValue">
+                                <option values="">--Select--</option>                              
+                                <option value=70>70</option>
+                                <option value=75>75</option>
+                                <option value=80>80</option>
+                                <option value=85>85</option>
+                              </select>
+                            컵사이즈: 
+                              <select style="float:left;" id="subcats">
+                              </select>
+                            </div>
+                        </div>
+                    </div>
+           <br>
+<script>
+ var one = [
+        {display: "--Select--"},
+                {display: "B", value: 2 }];
+   
+var two = [
+                {display: "--Select--"},
+                {display: "A", value: 1 },
+                {display: "B", value: 2 },
+                {display: "C", value: 3 },
+                {display: "D", value: 4 },
+                {display: "E", value: 5 },
+                {display: "F", value: 6 }];
+                
+$("#categories").change(function() {
+                     var parent = $(this).val();
+                        switch(parent){
+                            case '70':
+                                 list(one);
+                                break;
+                            case '75':
+                                 list(two);
+                                break;             
+                            default: //default child option is blank
+                                 list(two);
+                                break;
+                               }
+                });
+                function list(array_list)
+                {
+                    $("#subcats").html(""); //reset child options
+                    $(array_list).each(function (i) { //populate child options
+                    $("#subcats").append("<option value=\""+array_list[i].value+"\">"+array_list[i].display+"</option>");
+                    });
+                }
+</script>
+           <h4><strong>4.사이즈 & 브랜드</strong></h4>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <div class="service-item">
+                            밴드사이즈: 
+                              <select ng-model="bandValue">
+                                <option value=70>70</option>
+                                <option value=75>75</option>
+                                <option value=80>80</option>
+                                <option value=85>85</option>
+                              </select>
+                            컵사이즈: 
+                              <select ng-model="cupValue">
+                                <option value=1>A</option>
+                                <option value=2>B</option>
+                                <option value=3>C</option>
+                                <option value=4>D</option>
+                                <option value=5>E</option>
+                                <option value=6>F</option>
+                              </select>
+                            </div>
+                        </div>
+                    </div>
+           <br>
+           <h4><strong>5. 가슴위 공간이 남는지?</strong></h4>
+                     <hr class="small">
+                    <div class="row">
+                        <div class="col-xs-0 col-md-3">
+                        </div>                    
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="nnd">
+                                <img src="img/dgh.png" height="200px" /><br>남는다
+                                <input id="nnd" type="radio" ng-model="spaceValue" value="5a" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="unnd">
+                                <img src="img/pjh.png" height="200px" /><br>안남는다
+                                <input id="unnd" type="radio" ng-model="spaceValue" value="5b" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-0 col-md-3">
+                        </div>
+                    </div>
+           <br>          
+
+           <h4><strong>6. 훅앤아이</strong></h4>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-xs-0 col-md-3">
+                        </div>   
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="first">
+                                <img src="img/none.png" height="100px" /><br>맨안쪽
+                                <input id="first" type="radio" ng-model="hookValue" value="6a" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="second">
+                                <img src="img/thin.png" height="100px" /><br>중간
+                                <input id="second" type="radio" ng-model="hookValue" value="6b" />
+                            </div>
+                        </div>
+                        <div class="col-xs-0 col-md-3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-0 col-md-3">
+                        </div>   
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="third">
+                                <img src="img/mid.png" height="100px" /><br>바깥쪽
+                                <input id="third" type="radio" ng-model="hookValue" value="6c" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                            </div>
+                        </div>
+                        <div class="col-xs-0 col-md-3">
+                        </div>
+                    </div>
+           <br>
+
+           <h3><strong>사라스핏 추천제품: </strong></h3>
+
+           <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3a'"><h3><strong>사라스핏 1001 제품</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3b'"><h3><strong>사라스핏 1001 제품</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3c'"><h3><strong>사라스핏 1002 제품</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2a' && padValue=='3d'"><h3><strong>사라스핏 1003 제품</strong></h3></div>
+
+           <div ng-show="frontValue=='1a' && sideValue=='2b' && padValue=='3a'"><h3><strong>사라스핏 1001 제품</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2b' && padValue=='3b'"><h3><strong>사라스핏 1001 제품</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2b' && padValue=='3c'"><h3><strong>사라스핏 1002 제품</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2b' && padValue=='3d'"><h3><strong>사라스핏 1003 제품</strong></h3></div>
+
+           <div ng-show="frontValue=='1a' && sideValue=='2c' && padValue=='3a'"><h3><strong>Coming Soon</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2c' && padValue=='3b'"><h3><strong>Coming Soon</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2c' && padValue=='3c'"><h3><strong>Coming Soon</strong></h3></div>
+           <div ng-show="frontValue=='1a' && sideValue=='2c' && padValue=='3d'"><h3><strong>Coming Soon</strong></h3></div>
+
+
+           <div ng-show="frontValue=='1b' && sideValue=='2a' && padValue=='3a'"><h3><strong>사라스핏 1004 제품</strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2a' && padValue=='3b'"><h3><strong>사라스핏 1004 제품</strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2a' && padValue=='3c'"><h3><strong>사라스핏 1005 제품</strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2a' && padValue=='3d'"><h3><strong>사라스핏 1006 제품</strong></h3></div>
+
+           <div ng-show="frontValue=='1b' && sideValue=='2b' && padValue=='3a'"><h3><strong>사라스핏 1007 제품</strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2b' && padValue=='3b'"><h3><strong>사라스핏 1007 제품</strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2b' && padValue=='3c'"><h3><strong>사라스핏 1008 제품</strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2b' && padValue=='3d'"><h3><strong>사라스핏 1008 제품</strong></h3></div>
+
+           <div ng-show="frontValue=='1b' && sideValue=='2c' && padValue=='3a'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2c' && padValue=='3b'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2c' && padValue=='3c'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1b' && sideValue=='2c' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
+
+
+           <div ng-show="frontValue=='1c' && sideValue=='2a' && padValue=='3a'"><h3><strong>사라스핏 1009</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2a' && padValue=='3b'"><h3><strong>사라스핏 1009</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2a' && padValue=='3c'"><h3><strong>사라스핏 1010</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2a' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
+
+           <div ng-show="frontValue=='1c' && sideValue=='2b' && padValue=='3a'"><h3><strong>사라스핏 1009</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2b' && padValue=='3b'"><h3><strong>사라스핏 1009</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2b' && padValue=='3c'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2b' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
+
+           <div ng-show="frontValue=='1c' && sideValue=='2c' && padValue=='3a'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2c' && padValue=='3b'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2c' && padValue=='3c'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1c' && sideValue=='2c' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
+
+
+           <div ng-show="frontValue=='1d' && sideValue=='2a' && padValue=='3a'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2a' && padValue=='3b'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2a' && padValue=='3c'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2a' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
+
+           <div ng-show="frontValue=='1d' && sideValue=='2b' && padValue=='3a'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2b' && padValue=='3b'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2b' && padValue=='3c'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2b' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
+
+           <div ng-show="frontValue=='1d' && sideValue=='2c' && padValue=='3a'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2c' && padValue=='3b'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2c' && padValue=='3c'"><h3><strong>Coming Soon</p></strong></h3></div>
+           <div ng-show="frontValue=='1d' && sideValue=='2c' && padValue=='3d'"><h3><strong>Coming Soon</p></strong></h3></div>
+
+           <h3><strong>사이즈 추천: </strong></h3>
+           <!-- 70B -->
+           <div ng-show="bandValue==70 && cupValue==2 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>65C</strong></h3></div>
+           <div ng-show="bandValue==70 && cupValue==2 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>65C or 70A</strong></h3></div>
+           <div ng-show="bandValue==70 && cupValue==2 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>70A</strong></h3></div>
+           <div ng-show="bandValue==70 && cupValue==2 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 75A -->
+           <div ng-show="bandValue==75 && cupValue==1 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>70B</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==1 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>70B or 75AA</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==1 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>75AA</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==1 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 75B -->
+           <div ng-show="bandValue==75 && cupValue==2 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>70C</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==2 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>70C or 75A</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==2 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>75A</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==2 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 75C -->
+           <div ng-show="bandValue==75 && cupValue==3 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>70D</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==3 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>70D or 75B</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==3 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>75B</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==3 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 75D -->
+           <div ng-show="bandValue==75 && cupValue==4 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>70E</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==4 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>70E or 75C</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==4 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>75C</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==4 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 75E -->
+           <div ng-show="bandValue==75 && cupValue==5 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>70F</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==5 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>70F or 75D</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==5 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>75D</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==5 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 75F -->
+           <div ng-show="bandValue==75 && cupValue==6 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>70G</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==6 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>70G or 75E</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==6 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>75E</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==6 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 80A -->
+           <div ng-show="bandValue==80 && cupValue==1 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75B</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==1 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75B or 80AA</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==1 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>80AA</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==1 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 80B -->
+           <div ng-show="bandValue==80 && cupValue==2 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75C</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==2 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75C or 80A</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==2 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>80A</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==2 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 80C -->
+           <div ng-show="bandValue==80 && cupValue==3 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75D</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==3 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75D or 80B</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==3 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>80B</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==3 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 80D -->
+           <div ng-show="bandValue==80 && cupValue==4 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75E</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==4 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75E or 80C</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==4 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>80C</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==4 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 80E -->
+           <div ng-show="bandValue==80 && cupValue==5 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75F</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==5 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75F or 80D</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==5 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>80D</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==5 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 80F -->
+           <div ng-show="bandValue==80 && cupValue==6 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75G</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==6 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75G or 80E</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==6 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>80E</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==6 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 85A -->
+           <div ng-show="bandValue==85 && cupValue==1 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>80B</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==1 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>80B or 85AA</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==1 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>85AA</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==1 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 85B -->
+           <div ng-show="bandValue==85 && cupValue==2 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>80C</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==2 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>80C or 85A</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==2 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>85A</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==2 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 85C -->
+           <div ng-show="bandValue==85 && cupValue==3 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>80D</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==3 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>80D or 85B</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==3 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>85B</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==3 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 85D -->
+           <div ng-show="bandValue==85 && cupValue==4 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>80E</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==4 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>80E or 85C</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==4 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>85C</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==4 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 85E -->
+           <div ng-show="bandValue==85 && cupValue==5 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>80F</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==5 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>80F or 85D</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==5 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>85D</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==5 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 85F -->
+           <div ng-show="bandValue==85 && cupValue==6 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75G</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==6 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75G or 85E</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==6 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>85E</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==6 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+
+        </form>
+                    <br>
+
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+
+    <div class="text-vertical-center3" style="position: relative; margin: auto; text-align: center;">
+        <a href="https://sarasfit.typeform.com/to/swPtZT" class="btn btn-dark btn-lg" style="margin: auto;">핏테스트 하러가기</a>
+    </div>
+
+     <!-- Header -->
+      <header id="top" class="header1">
+          <div class="text-vertical-center1">
+
+<h2 style="font-family: 'Nanum Brush Script', cursive;"><strong>아름다운 몸매를<br>연출하고<br>싶으신가요?</strong></h2>
+<h4>
+<br>
+<br>
+당신의 사이즈와 체형을 파악하여,<br>
+미스매치의 위험이 없는 브라를 제공하는<br>
+사라스핏(Sara’s Fit) 만의 차별화된 서비스!<br>
+
+단순히 몸에 맞는 사이즈를 넘어,<br>
+당신이 가장 편안할 수 있는, <br>
+당신의 핏이 가장 아름다울 수 있는(Fit),<br>
+그로 인해 당신의 “고급스러움”(Luxury)이<br>돋보일 수 있도록 
+아름다운<br>몸매를연출해 드립니다.
+</h4>
+
+         </div>
+     </header>
+
+    <br>
+
+
+     <!-- Header -->
+      <header id="top" class="header2">
+          <div class="text-vertical-center2">
+<h2 style="font-family: 'Nanum Brush Script', cursive;"><strong>사라스핏<br>핏테스트</strong></h2><br>
+             <h4>
+가슴 모양과 가슴 체형에 따라<br>편한 기능을 하는 브라가 달라집니다.<br><br>
+
+자기에게 맞는 사이즈를 입고<br>자신의 체형에 맞는 기능의 브라를 입어야<br>
+건강한 가슴을 유지하고 가장 여성적인<br>아름다운 핏을 나타낼 수 있습니다. <br><br>
+
+여러분에게 핏이 가장 잘 맞는 브라를<br>알려드리는 것이<br>사라(Sara)의 역할이라는 거 아시겠죠?
+             </h4>
+         </div>
+     </header>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Sara's Fit</strong>
+                    </h4>
+                    <p>서울특별시 성동구 왕십리로2길 20, 1층</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-circle fa-fw"></i> Kakao ID: mkkimwin</li>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="http://www.facebok.com/sarasfitbra"><i class="fa fa-facebook fa-fw fa-3x" style="color:#64b3b4;"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://blog.naver.com/sarasfit"><i class="fa fa-bold fa-fw fa-3x" style="color:#64b3b4;"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://www.instagram.com/mkkimwin"><i class="fa fa-instagram fa-fw fa-3x" style="color:#64b3b4;"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; sarasfit.com 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

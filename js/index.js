@@ -1,3 +1,24 @@
+angular.module("mainModule", [])
+  .controller("MyCtrl", function ($scope)
+  {
+    $scope.sizeCalc = function ()
+    {
+              $scope.bandValue1 = 10;
+              cupValue1 = cupValue+1; 
+              bandValue2 = bandValue-5;
+              cupValue2 = cupValue+1;
+              if (same){
+                if (up){
+                  if (first){
+                    showBand = bandValue1
+                    showCup = cupValue1
+                  }
+                }   
+              }
+              bandValue=5;              
+    };
+  })
+
 
 angular
   .module('Survey',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])

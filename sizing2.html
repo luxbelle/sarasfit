@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainModule">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="naver-site-verification" content="1efa5897a3c03594954d93ad1b2f0addfdeea167"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.css'>
+    <link rel='stylesheet prefetch' href='https://material.angularjs.org/1.1.0-rc.5/docs.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+    <script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.js'></script>
+    <script src="app.js"></script>
+    <script src="js/index.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Sara's Fit</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-controller="MyCtrl">
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                     <hr class="small">
+                    <p>나의 가슴 유형은? (정면1개, 측면1개, 패드1개를 선택해 주세요.)
+                    <br>
+        <form name="myForm" ng-submit="submitForm()">
+
+           <h4><strong>4.사이즈 & 브랜드</strong></h4>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <div class="service-item">
+                            밴드사이즈: 
+                              <select ng-model="bandValue">
+                                <option value=70>70</option>
+                                <option value=75>75</option>
+                                <option value=80>80</option>
+                                <option value=85>85</option>
+                              </select>
+                            컵사이즈: 
+                              <select ng-model="cupValue">
+                                <option value=1>A</option>
+                                <option value=2>B</option>
+                                <option value=3>C</option>
+                                <option value=4>D</option>
+                                <option value=5>E</option>
+                                <option value=6>F</option>
+                              </select>
+                            </div>
+                        </div>
+                    </div>
+           <br>
+           <h4><strong>5. 가슴위 공간이 남는지?</strong></h4>
+                     <hr class="small">
+                    <div class="row">
+                        <div class="col-xs-0 col-md-3">
+                        </div>                    
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="nnd">
+                                <img src="img/dgh.png" height="200px" /><br>남는다
+                                <input id="nnd" type="radio" ng-model="spaceValue" value="5a" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="unnd">
+                                <img src="img/pjh.png" height="200px" /><br>안남는다
+                                <input id="unnd" type="radio" ng-model="spaceValue" value="5b" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-0 col-md-3">
+                        </div>
+                    </div>
+           <br>          
+
+           <h4><strong>6. 훅앤아이</strong></h4>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-xs-0 col-md-3">
+                        </div>   
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="first">
+                                <img src="img/none.png" height="100px" /><br>맨안쪽
+                                <input id="first" type="radio" ng-model="hookValue" value="6a" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="second">
+                                <img src="img/thin.png" height="100px" /><br>중간
+                                <input id="second" type="radio" ng-model="hookValue" value="6b" />
+                            </div>
+                        </div>
+                        <div class="col-xs-0 col-md-3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-0 col-md-3">
+                        </div>   
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                                <label for="third">
+                                <img src="img/mid.png" height="100px" /><br>바깥쪽
+                                <input id="third" type="radio" ng-model="hookValue" value="6c" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="service-item">
+                            </div>
+                        </div>
+                        <div class="col-xs-0 col-md-3">
+                        </div>
+                    </div>
+           <br>
+
+           <!-- 70B -->
+           <div ng-show="bandValue==70 && cupValue==2 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>65C</strong></h3></div>
+           <div ng-show="bandValue==70 && cupValue==2 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>65C & 70A</strong></h3></div>
+           <div ng-show="bandValue==70 && cupValue==2 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>70A</strong></h3></div>
+           <div ng-show="bandValue==70 && cupValue==2 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 75A -->
+           <div ng-show="bandValue==75 && cupValue==1 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>70B</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==1 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>70B & 75AA</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==1 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>75AA</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==1 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 75B -->
+           <div ng-show="bandValue==75 && cupValue==2 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>70C</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==2 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>70C & 75A</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==2 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>75A</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==2 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 75C -->
+           <div ng-show="bandValue==75 && cupValue==3 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>70D</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==3 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>70D & 75B</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==3 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>75B</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==3 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 75D -->
+           <div ng-show="bandValue==75 && cupValue==4 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>70E</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==4 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>70E & 75C</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==4 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>75C</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==4 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 75E -->
+           <div ng-show="bandValue==75 && cupValue==5 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>70F</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==5 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>70F & 75D</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==5 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>75D</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==5 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 75F -->
+           <div ng-show="bandValue==75 && cupValue==6 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>70G</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==6 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>70G & 75E</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==6 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>75E</strong></h3></div>
+           <div ng-show="bandValue==75 && cupValue==6 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 80A -->
+           <div ng-show="bandValue==80 && cupValue==1 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75B</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==1 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75B & 80AA</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==1 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>80AA</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==1 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 80B -->
+           <div ng-show="bandValue==80 && cupValue==2 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75C</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==2 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75C & 80A</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==2 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>80A</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==2 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 80C -->
+           <div ng-show="bandValue==80 && cupValue==3 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75D</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==3 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75D & 80B</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==3 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>80B</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==3 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 80D -->
+           <div ng-show="bandValue==80 && cupValue==4 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75E</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==4 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75E & 80C</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==4 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>80C</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==4 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 80E -->
+           <div ng-show="bandValue==80 && cupValue==5 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75F</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==5 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75F & 80D</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==5 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>80D</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==5 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 80F -->
+           <div ng-show="bandValue==80 && cupValue==6 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75G</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==6 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75G & 80E</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==6 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>80E</strong></h3></div>
+           <div ng-show="bandValue==80 && cupValue==6 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 85A -->
+           <div ng-show="bandValue==85 && cupValue==1 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>80B</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==1 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>80B & 85AA</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==1 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>85AA</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==1 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 85B -->
+           <div ng-show="bandValue==85 && cupValue==2 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>80C</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==2 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>80C & 85A</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==2 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>85A</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==2 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 85C -->
+           <div ng-show="bandValue==85 && cupValue==3 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>80D</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==3 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>80D & 85B</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==3 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>85B</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==3 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 85D -->
+           <div ng-show="bandValue==85 && cupValue==4 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>80E</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==4 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>80E & 85C</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==4 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>85C</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==4 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 85E -->
+           <div ng-show="bandValue==85 && cupValue==5 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>80F</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==5 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>80F & 85D</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==5 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>85D</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==5 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+           <!-- 85F -->
+           <div ng-show="bandValue==85 && cupValue==6 && spaceValue=='5a' && hookValue=='6a'"><h3><strong>75G</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==6 && spaceValue=='5a' && hookValue=='6b'"><h3><strong>75G & 85E</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==6 && spaceValue=='5a' && hookValue=='6c'"><h3><strong>85E</strong></h3></div>
+           <div ng-show="bandValue==85 && cupValue==6 && spaceValue=='5b'"><h3><strong>75AA</strong></h3></div>
+
+
+                      
+        </form>
+                    <br>
+
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
