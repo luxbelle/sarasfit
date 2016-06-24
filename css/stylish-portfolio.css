@@ -191,7 +191,6 @@ hr.small {
 }
 
 /* Header */
-
 .header {
     display: table;
     position: relative;
@@ -203,6 +202,7 @@ hr.small {
     background-size: cover;
     -o-background-size: cover;
 }
+
 
 /* Header */
 
