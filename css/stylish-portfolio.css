@@ -209,7 +209,7 @@ hr.small {
 .header {
     display: table;
     position: relative;
-    width: 100%;
+    width: 90%;
     height: 100%;
     background: url(../img/saramain9.png) no-repeat center scroll;
     -webkit-background-size: cover;
